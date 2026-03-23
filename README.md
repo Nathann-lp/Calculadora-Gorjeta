@@ -1,50 +1,63 @@
-# Welcome to your Expo app 👋
+# 🍽️ Calculadora de Gorjetas
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Um aplicativo mobile simples, prático e direto ao ponto para calcular o valor da gorjeta em restaurantes e bares. Desenvolvido como projeto prático para consolidar conhecimentos em desenvolvimento mobile.
 
-## Get started
+## 📱 Sobre o Projeto
 
-1. Install dependencies
+A **Calculadora de Gorjetas** permite que o usuário insira o valor total da conta e a porcentagem de gorjeta que deseja deixar para o atendimento. O aplicativo processa os dados instantaneamente e exibe o valor exato da gorjeta a ser paga. 
 
-   ```bash
-   npm install
-   ```
+O design foi pensado com uma temática de "Restaurante/Lifestyle", utilizando tons de laranja para uma interface agradável e intuitiva.
 
-2. Start the app
+## ✨ Funcionalidades
 
-   ```bash
-   npx expo start
-   ```
+- **Entrada de Dados:** Campos numéricos dedicados para o "Valor da Conta (R$)" e a "Gorjeta (%)".
+- **Cálculo Preciso:** Processamento dos valores em tempo real, tratando as entradas para evitar erros de digitação (como uso de vírgulas no lugar de pontos).
+- **Teclado Dinâmico:** O teclado numérico é recolhido automaticamente ao acionar o botão de cálculo, melhorando a experiência do usuário.
+- **Reset de Estado:** Botão dinâmico que permite realizar um novo cálculo facilmente limpando os dados anteriores.
 
-In the output, you'll find options to open the app in a
+## 🚀 Tecnologias Utilizadas
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+Este projeto foi construído com as seguintes tecnologias:
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+- **[React Native](https://reactnative.dev/):** Framework principal para o desenvolvimento da interface mobile.
+- **[Expo](https://expo.dev/):** Plataforma que facilita a criação, testes e build do projeto React Native.
+- **JavaScript:** Lógica de programação e formatação dos cálculos.
+- **React Hooks:** Utilização de `useState` para gerenciamento de estados dinâmicos (valores, mensagens de feedback e textos de botões).
 
-## Get a fresh project
+## 📂 Estrutura do Projeto
 
-When you're ready, run:
+O projeto segue uma arquitetura clássica e componentizada, facilitando a manutenção e a escalabilidade do código:
 
-```bash
-npm run reset-project
-```
+```text
+calculadora-gorjeta/
+├── App.js                 # Ponto de entrada do aplicativo
+├── src/
+│   └── components/
+│       ├── Title/         # Componente do cabeçalho
+│       ├── Form/          # Componente principal de formulário e lógica
+│       │   └── ResultGorjeta/ # Componente de exibição do resultado final
+└── package.json           # Dependências e scripts do projeto
+🛠️ Como Executar o Projeto
+Para testar este aplicativo na sua máquina de forma fluida e sem sobrecarregar o processamento com emuladores pesados, recomendamos o uso do Expo Go direto no seu smartphone.
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+Pré-requisitos
+Ter o Node.js instalado.
 
-## Learn more
+Ter o aplicativo Expo Go instalado no seu celular (disponível na App Store e Google Play).
 
-To learn more about developing your project with Expo, look at the following resources:
+Passo a Passo
+Clone este repositório ou baixe o código-fonte.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+Abra o terminal na pasta raiz do projeto.
 
-## Join the community
+Instale as dependências executando:
 
-Join our community of developers creating universal apps.
+Bash
+npm install
+Inicie o servidor de desenvolvimento:
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Bash
+npx expo start
+Com o servidor rodando, um QR Code aparecerá no terminal.
+
+Abra o aplicativo Expo Go no seu celular e escaneie o QR Code. O aplicativo será compilado e aberto instantaneamente na tela do seu dispositivo!
